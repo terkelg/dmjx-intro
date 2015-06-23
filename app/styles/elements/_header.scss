@@ -1,0 +1,47 @@
+/*
+ Header
+ Navigation
+*/
+.header {
+  width: 100%;
+  height: $navHeight;
+  background-color: #FFFFFF;
+  z-index: 100;
+  position: fixed;
+}
+.header__content {
+  position: relative;
+  max-width: $maxWidth;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  .logo {
+    float: left;
+    height: 100%;
+    img {
+      @include vertical-align;
+      max-width: 160px;
+      height: auto;
+    }
+  }
+
+  .nav {
+    float: right;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    line-height: $navHeight;
+    li {
+      display: inline-block;
+      margin-right: 1.3em;
+      &:last-child { margin: 0; }
+    }
+    a {
+      font-weight: bold;
+      font-size: 0.80em;
+      color: $colorPurple;
+      text-transform: uppercase;
+    }
+  }
+}

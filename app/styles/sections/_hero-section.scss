@@ -1,0 +1,26 @@
+/*
+ * Hero
+ */
+.hero {
+  background-color: $colorNeoGreen;
+
+  .section__content {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 2%;
+
+    .intro-logo { max-width: 75%; }
+    .arrow {
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 9.5%;  // SHOULD BE LESS ON SMALLER DEVICES
+      max-width: 1.5%;
+      min-width: 10px;
+      height: auto;
+    }
+  }
+
+  &:after { background-color: $colorPurple; }
+}

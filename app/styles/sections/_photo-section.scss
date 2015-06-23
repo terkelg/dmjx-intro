@@ -1,0 +1,19 @@
+/*
+ * Photos - Section
+ */
+.photos {
+  background-color: $colorYellow;
+
+  .section__content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 4% 0;
+  }
+
+  &:after { background-color: $colorRed; }
+}
+
+
+
+
+

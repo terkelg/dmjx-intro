@@ -1,0 +1,29 @@
+// bower:scss
+// endbower
+
+
+// Global Variables
+$navHeight: 64px;
+$maxWidth: 1300px;
+$sectionPadding: 10%;
+
+// Colors
+$colorNeoGreen: #4DE3A6;
+$colorPurple: #5150E8;
+$colorPink: #FFDFE5;
+$colorRed: #FF3856;
+$colorYellow: #FFEC6D;
+
+// Import Mixins
+@import 'mixins';
+
+// General styling
+@import 'basics';
+
+// Elements
+@import 'elements/header';
+
+// Sections
+@import 'sections/hero-section';
+@import 'sections/program-section';
+@import 'sections/photo-section';

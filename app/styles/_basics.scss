@@ -1,0 +1,56 @@
+body {
+	background: #fafafa;
+	font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+	color: #333;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+/*
+ * Links
+ */
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+/*
+ * Images
+ */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+
+/*
+ * Content wrapper
+ */
+.wrapper {
+  padding-top: $navHeight;
+}
+
+/*
+ * Default section settings here
+ */
+.section {
+  width: 100%;
+  &:after {
+	display: block;
+	content: '';
+	height: 1.4vw;
+	max-height: 25px;
+	min-width: 10px;
+  }
+}
+.section__content {
+  max-width: $maxWidth;
+  padding: $sectionPadding 0;
+}
