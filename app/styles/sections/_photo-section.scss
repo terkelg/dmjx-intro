@@ -15,5 +15,33 @@
 
 
 
+.photo-grid {
+  $spacing: 2;
+  $imagesPerRow: 4;
+
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+
+  .photo {
+    width: 25% - 1.5%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+
+    &:nth-child(4n) { margin-right: 0; }
+
+    .border {
+      background-color: $colorWhite;
+      padding: 8%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 
 
+}
