@@ -1,0 +1,70 @@
+/*
+ * Tutorer - Section
+ */
+.tutors {
+  background-color: $colorPurple;
+
+  .section__content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 4% 0;
+  }
+
+  &:after { background-color: $colorPink; }
+}
+
+.tutor-grid {
+  $spacing: 1%;
+  $imagesPerRow: 6;
+  $cellWidth: (100/$imagesPerRow)-$spacing;
+  $cellPadding: $spacing*$imagesPerRow/5; // only add padding on 3 elements
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .tutor {
+    width: $cellWidth;
+    float: left;
+    padding-right: $cellPadding;
+    padding-bottom: 1.8%;
+    &:nth-child(6n) { padding-right: 0; }
+
+    .name, .class {
+      color: $colorWhite;
+      font-size: 0.95em;
+      display: block;
+    }
+
+    .name {
+      font-weight: bold;
+      padding-top: 8%;
+      margin-bottom: -2px;
+    }
+
+    .border {
+      display: block;
+      background-color: $colorWhite;
+      padding: 7%;
+      transition: background-color 0.5s ease;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      &:hover {
+        background-color: $colorWhite;
+      }
+    }
+    .border--male { background-color: $colorNeoGreen; }
+    .border--female { background-color: $colorPink; }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}

@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/spinkit/css/spinkit.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -23,7 +24,6 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
 
     <!-- Header -->
     <nav class="header">
@@ -212,38 +212,226 @@
 
       <section class="section photos">
         <div class="section__content">
+          <h2 class="section__title section__title--purple">#DMJXintro15</h2>
 
-          <!-- https://github.com/rogie/Dug.js -->
-          <ul class="photo-grid" id="instafeed">
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+          <ul class="photo-grid" id="instafeed"></ul>
+
+          <div class="loader js-loader"><span class="loader-inner"></span></div>
+
+          <button class="load-more hide js-load-more" title="Load flere billeder">Se flere</button>
+        </div>
+      </section>
+
+
+      <section class="section tutors">
+        <div class="section__content">
+          <h2 class="section__title section__title--white">Tutorer</h2>
+
+          <ul class="tutor-grid">
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb20.jpg">
+              </span>
+              <span class="name">Julius B. Harrebek</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb1.jpg">
+              </span>
+              <span class="name">Amanda Engelhart</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb21.jpg">
+              </span>
+              <span class="name">Terkel Gjervig</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb2.jpg">
+              </span>
+              <span class="name">Christine Jensen</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb3.jpg">
+              </span>
+              <span class="name">Emilie Richter Fafner</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb4.jpg">
+              </span>
+              <span class="name">Marck Lund-Nielsen</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb5.jpg">
+              </span>
+              <span class="name">Jonas Frederiksen</span>
+              <span class="class">ID</span>
             </li>
-            <li class="photo">
-              <div class="border"><img src="http://placehold.it/150x150" alt="Text here"></div>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb6.jpg">
+              </span>
+              <span class="name">Jacob Sørensen</span>
+              <span class="class">ID</span>
             </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb7.jpg">
+              </span>
+              <span class="name">Marius Juul Nielsen</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb8.jpg">
+              </span>
+              <span class="name">Mie Sophie</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb9.jpg">
+              </span>
+              <span class="name">Charlotte Ratje</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb10.jpg">
+              </span>
+              <span class="name">Oliver Mirkovic</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb11.jpg">
+              </span>
+              <span class="name">Philip Stampe</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb12.jpg">
+              </span>
+              <span class="name">Klara V. Christiansen</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb14.jpg">
+              </span>
+              <span class="name">Marie C. Frederiksen</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb15.jpg">
+              </span>
+              <span class="name">Valdemar Edouardo</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb16.jpg">
+              </span>
+              <span class="name">Simone Wärme</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb25.jpg">
+              </span>
+              <span class="name">Andreas Arnaa</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb17.jpg">
+              </span>
+              <span class="name">Cecilie Jelstrup Larsen</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb18.jpg">
+              </span>
+              <span class="name">Thorbjørn Kragh</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb19.jpg">
+              </span>
+              <span class="name">Jeppe Vidstrup</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--female">
+                <img src="images/avatars/fb13.jpg">
+              </span>
+              <span class="name">Christina Anaya</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb22.jpg">
+              </span>
+              <span class="name">Christoffer Boas</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb23.jpg">
+              </span>
+              <span class="name">Rune Olsen</span>
+              <span class="class">ID</span>
+            </li>
+
+            <li class="tutor">
+              <span class="border border--male">
+                <img src="images/avatars/fb24.jpg">
+              </span>
+              <span class="name">Rasmus Luckmann</span>
+              <span class="class">ID</span>
+            </li>
+
           </ul>
 
         </div>
       </section>
-
 
     </div> <!-- /wrapper -->
 
@@ -251,9 +439,11 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/instafeed.js/instafeed.min.js"></script>
+    <script src="bower_components/instafeed.js/index.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+
+    <script src="scripts/instafeed.min.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

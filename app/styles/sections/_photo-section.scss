@@ -16,32 +16,155 @@
 
 
 .photo-grid {
-  $spacing: 2;
+  $spacing: 1%;
   $imagesPerRow: 4;
+  $cellWidth: (100/$imagesPerRow)-$spacing;
+  $cellPadding: $spacing*$imagesPerRow/3; // only add padding on 3 elements
 
   list-style: none;
-  overflow: hidden;
   margin: 0;
   padding: 0;
 
   .photo {
-    width: 25% - 1.5%;
-    margin-right: 2%;
-    margin-bottom: 2%;
+    width: $cellWidth;
     float: left;
-
-    &:nth-child(4n) { margin-right: 0; }
+    padding-right: $cellPadding;
+    padding-bottom: 1.8%;
+    &:nth-child(4n) { padding-right: 0; }
 
     .border {
-      background-color: $colorWhite;
-      padding: 8%;
+      display: block;
+      background-color: white;
+      padding: 7%;
+      transition: background-color 0.5s ease;
 
       img {
         width: 100%;
         height: auto;
       }
+
+      &:hover {
+        background-color: $colorPurple;
+      }
     }
   }
 
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
+.hide { display: none!important; }
+.show { display: block!important; }
+
+
+.load-more {
+  background-color: transparent;
+  border: none;
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  font-size: 1.2em;
+  color: $colorPurple;
+  font-weight: bold;
+  cursor: pointer;
+  padding-top: 2%;
+  transition: all 0.5s ease;
+
+  &:hover {
+    //color: $colorNeoGreen;
+    animation: flash 2s infinite ease-in;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/arrow-blue.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+  }
+}
+
+/*
+ * Loader
+ */
+.loader {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid $colorPurple;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: $colorPurple;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/*
+ * Flash Animation
+ */
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
 }

@@ -54,3 +54,11 @@ img {
   max-width: $maxWidth;
   padding: $sectionPadding 0;
 }
+
+.section__title {
+  font-size: 3em;
+  margin: 0;
+  padding-bottom: 4%;
+}
+.section__title--purple { color: $colorPurple; }
+.section__title--white { color: $colorWhite; }

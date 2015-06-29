@@ -4,9 +4,7 @@
   "dependencies": {
     "jquery": "~1.11.1",
     "modernizr": "~2.8.2",
-    "instafeed.js": "~1.3.2"
-  },
-  "devDependencies": {
-    "instafeed.js": "~1.3.2"
+    "instafeed.js": "https://raw.githubusercontent.com/stevenschobert/instafeed.js/master/instafeed.min.js",
+    "spinkit": "~1.0.1"
   }
 }
