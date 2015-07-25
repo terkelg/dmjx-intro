@@ -2,8 +2,12 @@
 
 $('document').ready(function(){
 
-    var $loadButton, $loader, feed;
+    /*
+     * Instafeed
+     * Load instagram images
+     */
 
+    var $loadButton, $loader, feed;
 
     // grab out load more button and loader
     $loadButton = $('.js-load-more');
@@ -37,6 +41,23 @@ $('document').ready(function(){
 
     // run our feed!
     feed.run();
+
+    /*
+     * Tab Section
+     * Simple jQuery tags
+     */
+    $('#tab-content div').hide();
+    $('#tab-content div:first').show();
+
+    $('#nav li').click(function(event) {
+        event.preventDefault();
+        $('#nav li a').removeClass('active');
+        $(this).find('a').addClass('active');
+        $('#tab-content div').hide();
+
+        var indexer = $(this).index(); //gets the current index of (this) which is #nav li
+        $('#tab-content div:eq(' + indexer + ')').fadeIn(); //uses whatever index the link has to open the corresponding box
+    });
 
 });
 

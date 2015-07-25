@@ -52,7 +52,11 @@ img {
 }
 .section__content {
   max-width: $maxWidth;
-  padding: $sectionPadding 0;
+  padding: $sectionPadding 3%;
+
+  @media #{$small-up} {
+	padding: $sectionPadding 5%;
+  }
 }
 
 .section__title {

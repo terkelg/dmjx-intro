@@ -7,7 +7,6 @@
   .section__content {
     text-align: center;
     margin: 0 auto;
-    padding: 4% 0;
   }
 
   &:after { background-color: $colorRed; }
@@ -16,21 +15,33 @@
 
 
 .photo-grid {
-  $spacing: 1%;
-  $imagesPerRow: 4;
-  $cellWidth: (100/$imagesPerRow)-$spacing;
-  $cellPadding: $spacing*$imagesPerRow/3; // only add padding on 3 elements
-
   list-style: none;
   margin: 0;
   padding: 0;
 
   .photo {
-    width: $cellWidth;
+    width: 47.5%;       // (100/imagesPerRow)-spacing
+    padding-right: 5%;  // {spacing}*{imagesPerRow}/{imagesPerRow-1}
+    padding-bottom: 5%;
     float: left;
-    padding-right: $cellPadding;
-    padding-bottom: 1.8%;
-    &:nth-child(4n) { padding-right: 0; }
+
+    @media #{$small} {
+      &:nth-child(2n) { padding-right: 0; }
+    }
+
+    @media #{$medium} {
+      width: 31.333333%;
+      padding-right: 2%;
+      padding-bottom: 2.5%;
+      &:nth-child(3n) { padding-right: 0; }
+    }
+
+    @media #{$medium-up} {
+      width: 23%;
+      padding-right: 2%;
+      padding-bottom: 2.5%;
+      &:nth-child(4n) { padding-right: 0; }
+    }
 
     .border {
       display: block;

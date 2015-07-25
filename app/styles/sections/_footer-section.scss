@@ -1,0 +1,37 @@
+/*
+ * Footer - Section
+ */
+.footer {
+  background-color: $colorRed;
+
+  .section__content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &:after { display: none; }
+}
+
+
+.sponsors {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: auto;
+
+  li {
+    float: left;
+    width: 30.3333333%;
+    padding-right: 2%;
+    &:last-child {
+      padding-left: 3%;
+      padding-right: 0;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
+  }
+}

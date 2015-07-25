@@ -15,8 +15,29 @@ $colorRed: #FF3856;
 $colorYellow: #FFEC6D;
 $colorWhite: #FFFFFF;
 
+// Media queries
+$xsmall-breakpoint: 25em;
+$small-breakpoint: 40em;
+$medium-breakpoint: 55.5em;
+$large-breakpoint: 65em;
+$xlarge-breakpoint: 75em;
+
+$xsmall: "screen and (max-width: #{$xsmall-breakpoint})";
+$small: "screen and (max-width: #{$small-breakpoint})";
+$small-up: "screen and (min-width: #{$small-breakpoint})";
+$medium: "screen and (min-width: #{$small-breakpoint}) and (max-width: #{$medium-breakpoint})";
+$medium-up: "screen and (min-width: #{$small-breakpoint})";
+$large: "screen and (min-width: #{$medium-breakpoint}) and (max-width: #{$large-breakpoint})";
+$large-up: "screen and (min-width: #{$medium-breakpoint})";
+$xlarge: "screen and (min-width: #{$large-breakpoint}) and (max-width: #{$xlarge-breakpoint})";
+$xlarge-up: "screen and (min-width: #{$xlarge-breakpoint})";
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)";
+
+// Fix box-sizing
+@import 'utils/box-sizing';
+
 // Import Mixins
-@import 'mixins';
+@import 'utils/mixins';
 
 // General styling
 @import 'basics';
@@ -29,3 +50,5 @@ $colorWhite: #FFFFFF;
 @import 'sections/program-section';
 @import 'sections/photo-section';
 @import 'sections/tutorer-section';
+@import 'sections/classes-section';
+@import 'sections/footer-section';

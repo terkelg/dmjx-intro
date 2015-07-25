@@ -7,32 +7,56 @@
   .section__content {
     text-align: center;
     margin: 0 auto;
-    padding: 4% 0;
   }
 
   &:after { background-color: $colorPink; }
 }
 
 .tutor-grid {
-  $spacing: 1%;
-  $imagesPerRow: 6;
-  $cellWidth: (100/$imagesPerRow)-$spacing;
-  $cellPadding: $spacing*$imagesPerRow/5; // only add padding on 3 elements
-
   list-style: none;
   margin: 0;
   padding: 0;
 
   .tutor {
-    width: $cellWidth;
+    width: 47.5%;       // (100/{imagesPerRow})-{spacing}
+    padding-right: 5%;  // {spacing}*{imagesPerRow}/{imagesPerRow-1} - No padding on last item
+    padding-bottom: 4%;
     float: left;
-    padding-right: $cellPadding;
-    padding-bottom: 1.8%;
-    &:nth-child(6n) { padding-right: 0; }
+
+    @media #{$small} {
+      &:nth-child(2n) { padding-right: 0; }
+    }
+
+    @media #{$medium} {
+      width: 31.333333%;
+      padding-right: 2%;
+      padding-bottom: 2.5%;
+      &:nth-child(3n) { padding-right: 0; }
+    }
+    
+    @media #{$large} {
+      width: 23%;
+      padding-right: 2%;
+      padding-bottom: 2.5%;
+      &:nth-child(4n) { padding-right: 0; }
+    }
+
+    @media #{$large-up} {
+      width: 14.666666%;
+      padding-right: 2%;
+      padding-bottom: 2.5%;
+      &:nth-child(4n) { padding-right: 2%; }
+      &:nth-child(6n) { padding-right: 0; }
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+    }
 
     .name, .class {
       color: $colorWhite;
-      font-size: 0.95em;
+      font-size: 0.85em;
       display: block;
     }
 
@@ -46,19 +70,32 @@
       display: block;
       background-color: $colorWhite;
       padding: 7%;
-      transition: background-color 0.5s ease;
+      transition: background-color 0.3s ease;
 
       img {
         width: 100%;
         height: auto;
       }
 
-      &:hover {
-        background-color: $colorWhite;
-      }
+      &:hover { background-color: $colorWhite; }
     }
-    .border--male { background-color: $colorNeoGreen; }
-    .border--female { background-color: $colorPink; }
+
+    &:hover {
+      text-decoration: none;
+      //animation: shake 0.3s ease;
+    }
+
+  }
+
+  .tutor--male {
+    &:hover .name,
+    &:hover .class { color: $colorNeoGreen; }
+    .border { background-color: $colorNeoGreen };
+  }
+  .tutor--female {
+    &:hover .name,
+    &:hover .class { color: $colorPink; }
+    .border { background-color: $colorPink };
   }
 
   &:after {
@@ -67,4 +104,25 @@
     clear: both;
   }
 
+}
+
+
+/*
+ * Animation
+ */
+@keyframes shake {
+  0%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
 }

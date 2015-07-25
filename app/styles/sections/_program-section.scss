@@ -7,7 +7,6 @@
   .section__content {
     text-align: center;
     margin: 0 auto;
-    padding: 4% 0;
   }
 
   &:after { background-color: $colorNeoGreen; }
@@ -32,14 +31,27 @@
   margin: 0 auto;
   padding-bottom: 6%;
   overflow: auto;
+  box-sizing: border-box;
+
+  @media #{$medium-up} {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .event__cover {}
 
   .event__header {
     font-weight: bold;
     float: left;
-    width: 50%;
-    text-align: left;
+    width: 100%;
+    text-align: center;
+
+    @media #{$medium-up} {
+      text-align: left;
+      width: 50%;
+      padding: 0;
+    }
+
     h1 {
       font-size: 3em;
       margin: 0 0 -5px;
@@ -53,11 +65,16 @@
 
   .event__timetable {
     float: right;
-    width: 50%;
+    width: 100%;
     list-style: none;
     font-size: 1.2em;
-    padding: 0;
     margin: 31px 0 0 0; // 31 px to match title x-height
+
+    @media #{$medium-up} {
+      width: 50%;
+      padding: 0;
+    }
+
 
     .item {
       text-align: left;
@@ -99,9 +116,14 @@
   overflow: auto;
 
   .break__content {
-    width: 50%;
+    width: 100%;
     float: right;
-    text-align: left;
+    text-align: center;
+
+    @media #{$medium-up} {
+      width: 50%;
+      text-align: left;
+    }
 
     h2 {
       font-size: 1em;
