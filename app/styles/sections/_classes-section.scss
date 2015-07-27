@@ -22,9 +22,13 @@
   list-style: none;
 
   h2 {
-    font-size: 1em;
+    font-size: 0.75em;
     display: block;
     margin-bottom: 0;
+
+    @media #{$small-up} {
+      font-size: 1em;
+    }
 
     @media #{$large-up} {
       display: inline;

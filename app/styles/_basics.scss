@@ -65,9 +65,13 @@ img {
 }
 
 .section__title {
-  font-size: 3em;
+  font-size: 2em;
   margin: 0;
   padding-bottom: 4%;
+
+  @media #{$small-up} {
+	font-size: 3em;
+  }
 }
 .section__title--purple { color: $colorPurple; }
 .section__title--white { color: $colorWhite; }

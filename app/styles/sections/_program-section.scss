@@ -18,8 +18,12 @@
  */
 .program__title h2 {
   color: $colorPurple;
-  font-size: 1.5em;
+  font-size: 2em;
   padding-bottom: 4%;
+
+  @media #{$small-up} {
+    font-size: 2.5em;
+  }
 }
 
 /*
@@ -29,9 +33,13 @@
   width: 100%;
   max-width: 640px;
   margin: 0 auto;
-  padding-bottom: 6%;
+  padding-bottom: 15%;
   overflow: auto;
   box-sizing: border-box;
+
+  @media #{$small-up} {
+    padding-bottom: 6%;
+  }
 
   @media #{$medium-up} {
     padding-left: 0;
@@ -44,7 +52,7 @@
     font-weight: bold;
     float: left;
     width: 100%;
-    text-align: center;
+    text-align: left;
 
     @media #{$medium-up} {
       text-align: left;
@@ -53,10 +61,15 @@
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 2em;
       margin: 0 0 -5px;
       padding-top: 4%;
       padding-bottom: 0;
+
+
+      @media #{$small-up} {
+        font-size: 3em;
+      }
     }
     time {
       font-size: 1.5em;
@@ -93,7 +106,12 @@
 }
 
 .program__event--small {
-  padding-bottom: 2%;
+  padding-bottom: 15%;
+
+  @media #{$small-up} {
+    padding-bottom: 2%;
+  }
+
   .event__timetable { margin: 22px 0 0 0; }
   &:last-child { padding-bottom: 6%; }
 }
@@ -111,18 +129,27 @@
   max-width: 620px;
   margin: 0 auto;
   font-size: 1.6em;
-  padding: 0 0 6% 0;
+  padding: 0 0 15% 0;
   color: $colorNeoGreen;
   overflow: auto;
+
+  @media #{$small-up} {
+    padding: 0 0 6% 0;
+  }
 
   .break__content {
     width: 100%;
     float: right;
     text-align: center;
+    border-bottom: 1px solid $colorNeoGreen;
+    border-top: 1px solid $colorNeoGreen;
+    padding: 5% 0;
 
     @media #{$medium-up} {
       width: 50%;
       text-align: left;
+      padding: 0;
+      border: none;
     }
 
     h2 {
