@@ -5,21 +5,28 @@ $('document').ready(function(){
     /*
      * Hamburger button
      */
-    var $menuBtn;
-    $menuBtn = $('.js-menu');
-
+    var $menuBtn = $('.js-menu');
     $menuBtn.on('click', function() {
         $('.nav').toggleClass('open');
     });
 
+    /*
+     * ScrollIt
+     */
+    $.scrollIt({
+        activeClass: 'active'
+    });
 
 
 
     /*
      * Instafeed
      * Load instagram images
+     *
+     * http://stackoverflow.com/questions/7866898/jslint-to-ignore-undefined-variables
      */
 
+    /*global Instafeed */
     var $loadButton, $loader, feed;
 
     // grab out load more button and loader
