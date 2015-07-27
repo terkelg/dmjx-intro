@@ -35,7 +35,7 @@ $('document').ready(function(){
 
     feed = new Instafeed({
         get: 'tagged',
-        tagName: 'awesome',
+        tagName: 'DMJXintro15',
         resolution: 'low_resolution',
         limit: 8,
         clientId: '4cc9716d969b44d3abeb1f4751a4586c',
@@ -53,7 +53,6 @@ $('document').ready(function(){
 
     // bind the load more button
     $loadButton.on('click', function() {
-        console.log('You Clicked ...');
         $loadButton.addClass('hide');
         $loader.removeClass('hide');
         feed.next();
@@ -82,7 +81,3 @@ $('document').ready(function(){
     });
 
 });
-
-/* DMJXintro15
- * Add likes/description on hover
- */
