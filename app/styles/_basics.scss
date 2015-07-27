@@ -54,6 +54,11 @@ img {
   max-width: $maxWidth;
   padding: $sectionPadding 3%;
 
+
+  // TODO: Check this out. Not sure it's all right
+  @media #{$xsmall} {
+	padding: $sectionPadding 5%;
+  }
   @media #{$small-up} {
 	padding: $sectionPadding 5%;
   }

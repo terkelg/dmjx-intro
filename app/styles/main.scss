@@ -3,7 +3,7 @@
 
 
 // Global Variables
-$navHeight: 64px;
+$navHeight: 60px;
 $maxWidth: 1300px;
 $sectionPadding: 10%;
 
@@ -16,13 +16,13 @@ $colorYellow: #FFEC6D;
 $colorWhite: #FFFFFF;
 
 // Media queries
-$xsmall-breakpoint: 25em;
+$xsmall-breakpoint: 20em;
 $small-breakpoint: 40em;
 $medium-breakpoint: 55.5em;
 $large-breakpoint: 65em;
 $xlarge-breakpoint: 75em;
 
-$xsmall: "screen and (max-width: #{$xsmall-breakpoint})";
+$xsmall: "screen and (max-width: #{$xsmall-breakpoint})"; // Special usecases only
 $small: "screen and (max-width: #{$small-breakpoint})";
 $small-up: "screen and (min-width: #{$small-breakpoint})";
 $medium: "screen and (min-width: #{$small-breakpoint}) and (max-width: #{$medium-breakpoint})";
