@@ -3,6 +3,19 @@
 $('document').ready(function(){
 
     /*
+     * Hamburger button
+     */
+    var $menuBtn;
+    $menuBtn = $('.js-menu');
+
+    $menuBtn.on('click', function() {
+        $('.nav').toggleClass('open');
+    });
+
+
+
+
+    /*
      * Instafeed
      * Load instagram images
      */
@@ -41,6 +54,8 @@ $('document').ready(function(){
 
     // run our feed!
     feed.run();
+
+
 
     /*
      * Tab Section

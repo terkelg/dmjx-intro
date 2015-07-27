@@ -6,16 +6,17 @@
   width: 100%;
   height: $navHeight;
   background-color: #FFFFFF;
-  z-index: 100;
   position: fixed;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
 }
 
 .header__content {
   position: relative;
+  z-index: initial;
   max-width: $maxWidth;
+  background-color: #FFFFFF;
   height: 100%;
   margin: 0 auto;
-  padding: 0 1em;
 
   .logo {
     float: left;
@@ -24,25 +25,136 @@
       @include vertical-align;
       max-width: 160px;
       height: auto;
+      margin-left: 1em;
     }
   }
 
   .nav {
+    &.open {
+      transform: translateY(0);
+    }
+
+    z-index: -1;
+    position: relative;
+    box-sizing: border-box;
     float: right;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    line-height: $navHeight;
+    padding: 2.5% 0;
+    background-color: #fcfcfc;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2),
+          inset 0px 2px 2px -2px rgba(0,0,0,0.2);
+
+
+    transform: translateY(-50px);
+    transition: transform 0.5s ease;
+
+
+    @media #{$medium-up} {
+      display: block;
+      transform: translateY(0);
+      z-index: 1;
+      padding: 0 1em;
+      background-color: transparent;
+      width: auto;
+      text-align: left;
+      height: 100%;
+      line-height: $navHeight;
+      box-shadow: none;
+      transition: none;
+    }
+
     li {
       display: inline-block;
-      margin-right: 1.3em;
+      margin-right: 4%;
       &:last-child { margin: 0; }
+
+      @media #{$xsmall} {
+        margin-right: 2%;
+      }
+      @media #{$medium-up} {
+        margin-right: 1.3em;
+      }
     }
     a {
       font-weight: bold;
       font-size: 0.80em;
       color: $colorPurple;
       text-transform: uppercase;
+
+      @media #{$xsmall} {
+        font-size: 0.70em;
+      }
     }
   }
+}
+
+
+
+/*
+ Hamburger button
+ */
+.hamburger * {
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.hamburger {
+  position: relative;
+  float: right;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  
+  height: 30px;
+  width: 30px;
+
+  @media #{$medium-up} {
+    display: none;
+  }
+}
+
+.hamburger input[type=checkbox] {
+  display: none;
+}
+.hamburger label {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 14px;
+  left: 0;
+}
+
+.hamburger .line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #000;
+}
+
+.hamburger .diagonal.part-1 {
+  position: relative;
+  float: left;
+}
+.hamburger .horizontal {
+  position: relative;
+  float: left;
+  margin-top: 5px;
+}
+.hamburger .diagonal.part-2 {
+  position: relative;
+  float: left;
+  margin-top: 5px;
+}
+
+.hamburger input[type=checkbox]:checked ~ .lines > .horizontal { opacity: 0; }
+.hamburger input[type=checkbox]:checked ~ .lines > .diagonal.part-1 {
+  transform: rotate(135deg);
+  margin-top:10px;
+}
+.hamburger input[type=checkbox]:checked ~ .lines > .diagonal.part-2 {
+  transform: rotate(-135deg);
+  margin-top: -11px;
 }
