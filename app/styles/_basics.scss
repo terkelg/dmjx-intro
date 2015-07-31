@@ -54,8 +54,6 @@ img {
   max-width: $maxWidth;
   padding: $sectionPadding 3%;
 
-
-  // TODO: Check this out. Not sure it's all right
   @media #{$xsmall} {
 	padding: $sectionPadding 5%;
   }
@@ -75,3 +73,4 @@ img {
 }
 .section__title--purple { color: $colorPurple; }
 .section__title--white { color: $colorWhite; }
+.section__title--pink { color: $colorPink; }

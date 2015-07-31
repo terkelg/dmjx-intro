@@ -22,16 +22,22 @@
 
   li {
     float: left;
-    width: 30.3333333%;
-    padding-right: 2%;
-    &:last-child {
-      padding-left: 3%;
-      padding-right: 0;
+    width: 47.5%;
+    padding-right: 5%;
+
+    @media #{$small} {
+      &:nth-child(2n) { padding-right: 0; }
+    }
+
+    @media #{$medium-up} {
+      width: 30.3333333%;
+      padding-right: 2%;
+      &:nth-child(3n) { padding-right: 0; }
     }
 
     img {
+      width: 100%;
       height: auto;
-      max-width: 100%;
     }
   }
 }
