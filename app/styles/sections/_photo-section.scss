@@ -45,17 +45,18 @@
 
     .border {
       display: block;
-      background-color: white;
+      background-color: $colorNeoGreen;
       padding: 7%;
       transition: background-color 0.5s ease;
 
       img {
         width: 100%;
         height: auto;
+        margin-bottom: -4px;
       }
 
       &:hover {
-        background-color: $colorPurple;
+        background-color: $colorRed;
       }
     }
   }
