@@ -9,7 +9,12 @@
     margin: 0 auto;
     padding-bottom: 2%;
 
-    .intro-logo { max-width: 75%; }
+    .intro-logo {
+      max-width: 95%;
+      @media #{$medium-up} {
+        max-width: 75%;
+      }
+    }
     .arrow {
       display: block;
       position: relative;
@@ -17,7 +22,7 @@
       margin-right: auto;
       padding-top: 9.5%;  // SHOULD BE LESS ON SMALLER DEVICES
       max-width: 1.5%;
-      min-width: 10px;
+      min-width: 14px;
       height: auto;
       animation: pulse 0.8s ease infinite;
     }
