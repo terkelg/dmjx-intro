@@ -75,6 +75,7 @@
       img {
         width: 100%;
         height: auto;
+        margin-bottom: -4px; // fix uneven border
       }
 
       &:hover { background-color: $colorWhite; }
