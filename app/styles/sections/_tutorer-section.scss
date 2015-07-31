@@ -70,7 +70,7 @@
       display: block;
       background-color: $colorWhite;
       padding: 7%;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.4s ease;
 
       img {
         width: 100%;
@@ -78,7 +78,7 @@
         margin-bottom: -4px; // fix uneven border
       }
 
-      &:hover { background-color: $colorWhite; }
+      &:hover { background-color: $colorRed; }
     }
 
     &:hover {
