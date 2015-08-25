@@ -35,7 +35,7 @@ $('document').ready(function(){
 
     feed = new Instafeed({
         get: 'tagged',
-        tagName: 'DMJXintro15',
+        tagName: 'dmjxintro2015',
         resolution: 'low_resolution',
         limit: 8,
         clientId: '4cc9716d969b44d3abeb1f4751a4586c',
